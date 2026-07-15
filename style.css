@@ -132,12 +132,13 @@ a { text-decoration: none; color: inherit; }
 }
 
 .hero-card .hero-logo {
+  display: block;
   max-width: 220px;
-  margin: 0 0 16px;
+  margin: 0 auto 16px;
 }
 
 .hero-card .hero-tagline {
-  text-align: left;
+  text-align: center;
   color: var(--ink);
   font-weight: 700;
   text-shadow: none;
@@ -209,6 +210,25 @@ a { text-decoration: none; color: inherit; }
 .paw-click { display: none; }
 .paw-button:active .paw-idle { display: none; }
 .paw-button:active .paw-click { display: block; }
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.paw-button-disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.paw-button-disabled:hover {
+  transform: none;
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
 
 }
 
