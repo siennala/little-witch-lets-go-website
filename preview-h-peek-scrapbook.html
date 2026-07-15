@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preview H — Peek Hero + Scrapbook Story</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* HERO: bottom peek (Option D) */
+  .h-hero {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(160deg, var(--cream) 0%, var(--cream-2) 100%);
+    overflow: hidden;
+  }
+  .h-nav {
+    position: relative; z-index: 3;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 24px 6%;
+  }
+  .h-nav .nav-logo { font-weight: 700; color: var(--ink); }
+  .h-nav .nav-links a { color: var(--ink-soft); font-weight: 600; margin-left: 24px; }
+  .h-hero-content { position: relative; z-index: 3; text-align: center; padding: 40px 20px 0; }
+  .h-hero-content .hero-logo { max-width: 300px; margin: 0 auto 20px; }
+  .h-hero-content .hero-tagline {
+    color: var(--ink); font-weight: 700; text-shadow: none; background: none;
+    padding: 0; max-width: 520px; margin: 0 auto 28px;
+  }
+  .h-hero-art {
+    position: absolute; bottom: -6%; left: 50%; transform: translateX(-50%);
+    width: 78%; max-width: 720px; z-index: 1;
+  }
+  .h-hero-art img { width: 100%; display: block; filter: drop-shadow(0 30px 40px rgba(150,110,100,0.25)); }
+
+  /* STORY: scrapbook — polaroid-style cards scattered in a loose grid */
+  .h-story {
+    background: var(--cream-2);
+    padding: 100px 6%;
+  }
+  .h-story h2 { text-align: center; font-size: 2.2rem; color: var(--ink); margin-bottom: 40px; }
+  .h-scrapbook {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+  }
+  .h-polaroid {
+    background: var(--white-soft);
+    padding: 16px 16px 20px;
+    border-radius: 6px;
+    box-shadow: 0 10px 24px var(--shadow);
+    transform: rotate(var(--r, 0deg));
+    transition: transform 0.3s ease;
+  }
+  .h-polaroid:hover { transform: rotate(0deg) scale(1.03); }
+  .h-polaroid:nth-child(1) { --r: -2deg; }
+  .h-polaroid:nth-child(2) { --r: 1.5deg; }
+  .h-polaroid:nth-child(3) { --r: -1deg; }
+  .h-polaroid:nth-child(4) { --r: 2deg; }
+  .h-polaroid-region {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--gold-deep);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .h-polaroid h3 { font-size: 1.2rem; color: var(--ink); margin-bottom: 8px; }
+  .h-polaroid p { font-size: 0.9rem; color: var(--ink); line-height: 1.6; margin-bottom: 12px; }
+  .h-polaroid-cast { display: flex; gap: -8px; }
+  .h-polaroid-cast img {
+    width: 44px; height: 44px; border-radius: 50%;
+    object-fit: cover; margin-left: -10px;
+    border: 2px solid var(--white-soft);
+    background: var(--blush);
+  }
+  .h-polaroid-cast img:first-child { margin-left: 0; }
+</style>
+</head>
+<body>
+
+<div class="h-hero">
+  <nav class="h-nav">
+    <div class="nav-logo">Little Witch, Let's Go!</div>
+    <div class="nav-links">
+      <a href="#">Story</a>
+      <a href="#">Characters</a>
+      <a href="#">Art</a>
+      <a href="#">World</a>
+    </div>
+  </nav>
+  <div class="h-hero-content">
+    <img src="images/illustrations/logo.png" alt="Little Witch, Let's Go!" class="hero-logo">
+    <p class="hero-tagline">A soft, warm, and magical coming-of-age journey<br>about friendship, imperfection, and finding your own kind of magic.</p>
+    <a href="#" class="paw-button">
+      <img src="images/illustrations/paw_idle.png" alt="" class="paw-idle">
+      <span>Begin the Journey</span>
+    </a>
+  </div>
+  <div class="h-hero-art">
+    <img src="images/illustrations/师姐的魔法.png" alt="">
+  </div>
+</div>
+
+<div class="h-story">
+  <h2>The Story</h2>
+  <div class="h-scrapbook">
+
+    <div class="h-polaroid">
+      <div class="h-polaroid-region">Skygate</div>
+      <h3>The Journey Begins</h3>
+      <p>Taotao sets off for the Wisteria City competition, with Yuyao and her cat Benben close behind.</p>
+      <div class="h-polaroid-cast">
+        <img src="images/sprites/yuyao.png" alt="Yuyao">
+        <img src="images/sprites/wanwan.png" alt="Wanwan">
+        <img src="images/sprites/zhubei.png" alt="Zhu Bei">
+      </div>
+    </div>
+
+    <div class="h-polaroid">
+      <div class="h-polaroid-region">Willowhill</div>
+      <h3>The Sleeping Flowers</h3>
+      <p>A musician's magic gone astray puts a whole town to sleep — until friendship wakes it up.</p>
+      <div class="h-polaroid-cast">
+        <img src="images/sprites/faera.png" alt="Faera">
+        <img src="images/sprites/mudan.png" alt="Mudan">
+      </div>
+    </div>
+
+    <div class="h-polaroid">
+      <div class="h-polaroid-region">Westwitch</div>
+      <h3>The Invisible Wall</h3>
+      <p>A divided town, an invisible barrier, and two women determined to bring their neighbors together.</p>
+      <div class="h-polaroid-cast">
+        <img src="images/sprites/cassidy.png" alt="Cassidy">
+        <img src="images/sprites/amalia.png" alt="Amalia">
+      </div>
+    </div>
+
+    <div class="h-polaroid">
+      <div class="h-polaroid-region">Hellridge</div>
+      <h3>The Apology</h3>
+      <p>A hurt so old it forgot how to ask for forgiveness — and a girl finally brave enough to give it.</p>
+      <div class="h-polaroid-cast">
+        <img src="images/sprites/anran.png" alt="Anran">
+        <img src="images/sprites/elowen.png" alt="Elowen">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div style="padding:40px; text-align:center; color:#7c6a72; font-family:'Nunito',sans-serif;">
+  <p>This is <strong>Option H</strong>: bottom-peek hero (Option D) + a "scrapbook" story section — four
+  slightly-tilted polaroid cards, each covering one region with a headline, short blurb, and overlapping
+  character avatars. Playful and tactile, like flipping through a keepsake photo album.</p>
+</div>
+
+</body>
+</html>

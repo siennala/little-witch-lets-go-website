@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preview F — Storybook Scroll</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .f-chapter {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 6%;
+    align-items: start;
+  }
+  .f-chapter-num {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--blush-deep);
+    text-align: right;
+  }
+  .f-chapter-body h2 {
+    font-size: 1.6rem;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+  .f-chapter-body p {
+    color: var(--ink);
+    line-height: 1.85;
+    margin-bottom: 16px;
+  }
+  .f-mini-cast {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  .f-mini-char {
+    text-align: center;
+    width: 90px;
+  }
+  .f-mini-char .f-mini-avatar {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 6px;
+    background: var(--white-soft);
+    border-radius: 50%;
+    box-shadow: 0 6px 14px var(--shadow);
+    overflow: hidden;
+    position: relative;
+  }
+  .f-mini-char .f-mini-avatar img {
+    display: none;
+  }
+  .f-mini-char .f-mini-avatar {
+    background-size: 420% auto;
+    background-position: center 15%;
+    background-repeat: no-repeat;
+  }
+  .f-mini-char span {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--ink-soft);
+  }
+  .f-alt { background: var(--cream-2); }
+</style>
+</head>
+<body>
+
+<div style="text-align:center; padding: 80px 6% 20px;">
+  <img src="images/illustrations/logo.png" alt="Little Witch, Let's Go!" style="max-width:280px; display:block; margin:0 auto;">
+</div>
+
+<div class="f-chapter">
+  <div class="f-chapter-num">01</div>
+  <div class="f-chapter-body">
+    <h2>Skygate</h2>
+    <p>In the mountain town of Skygate, a young witch named <strong>Taotao</strong> prepares for the journey
+    of a lifetime — a prestigious magic competition in the far-off Wisteria City. She won't be going alone.</p>
+    <div class="f-mini-cast">
+      <div class="f-mini-char"><div class="f-mini-avatar" style="background-image:url('images/sprites/yuyao.png');"><img src="images/sprites/yuyao.png" alt="Yuyao"></div><span>Yuyao</span></div>
+      <div class="f-mini-char"><div class="f-mini-avatar" style="background-image:url('images/sprites/wanwan.png');"><img src="images/sprites/wanwan.png" alt="Wanwan"></div><span>Wanwan</span></div>
+      <div class="f-mini-char"><div class="f-mini-avatar" style="background-image:url('images/sprites/zhubei.png');"><img src="images/sprites/zhubei.png" alt="Zhu Bei"></div><span>Zhu Bei</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="f-chapter f-alt">
+  <div class="f-chapter-num">02</div>
+  <div class="f-chapter-body">
+    <h2>Willowhill</h2>
+    <p>A town gone quiet under a spell of sleeping flowers. Taotao and Yuyao meet a dreamy musician and
+    a calm tattoo artist whose magic ink hides secrets in every design.</p>
+    <div class="f-mini-cast">
+      <div class="f-mini-char"><div class="f-mini-avatar" style="background-image:url('images/sprites/faera.png');"><img src="images/sprites/faera.png" alt="Faera"></div><span>Faera</span></div>
+      <div class="f-mini-char"><div class="f-mini-avatar" style="background-image:url('images/sprites/mudan.png');"><img src="images/sprites/mudan.png" alt="Mudan"></div><span>Mudan</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="f-chapter">
+  <div class="f-chapter-num">03</div>
+  <div class="f-chapter-body">
+    <h2>Westwitch</h2>
+    <p>A town divided by an invisible barrier. A hardworking acting mayor and a once-invisible fashion
+    designer help the group see through more than just illusions.</p>
+    <div class="f-mini-cast">
+      <div class="f-mini-char"><div class="f-mini-avatar" style="background-image:url('images/sprites/cassidy.png');"><img src="images/sprites/cassidy.png" alt="Cassidy"></div><span>Cassidy</span></div>
+      <div class="f-mini-char"><div class="f-mini-avatar" style="background-image:url('images/sprites/amalia.png');"><img src="images/sprites/amalia.png" alt="Amalia"></div><span>Amalia</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="f-chapter f-alt">
+  <div class="f-chapter-num">04</div>
+  <div class="f-chapter-body">
+    <h2>Hellridge</h2>
+    <p>The truth unravels. A hurt so old it forgot how to ask for an apology — and a girl learning, for the
+    first time, to take responsibility for the pain she caused.</p>
+    <div class="f-mini-cast">
+      <div class="f-mini-char"><div class="f-mini-avatar" style="background-image:url('images/sprites/anran.png');"><img src="images/sprites/anran.png" alt="Anran"></div><span>Anran</span></div>
+      <div class="f-mini-char"><div class="f-mini-avatar" style="background-image:url('images/sprites/elowen.png');"><img src="images/sprites/elowen.png" alt="Elowen"></div><span>Elowen</span></div>
+    </div>
+  </div>
+</div>
+
+<div style="padding:40px; text-align:center; color:#7c6a72; font-family:'Nunito',sans-serif;">
+  <p>This is <strong>Option F — Storybook Scroll</strong>. The story and characters are woven together
+  chapter by chapter (numbered like a storybook), with small circular character portraits grouped
+  by the region they belong to. Great for readers who want story + characters told together as one
+  narrative, rather than as separate site sections.</p>
+</div>
+
+</body>
+</html>

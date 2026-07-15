@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preview B — Minimal Centered</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .preview-hero-b {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('images/illustrations/师姐的魔法.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+  }
+  .preview-hero-b::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255,250,243,0.25) 0%, rgba(255,250,243,0.15) 40%, var(--cream) 100%);
+  }
+  .preview-nav-b {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 6%;
+  }
+  .preview-nav-b img { height: 34px; }
+  .preview-nav-b .nav-links a {
+    color: var(--white-soft);
+    font-weight: 600;
+    margin-left: 28px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5), 0 0 12px rgba(0,0,0,0.35);
+  }
+  .preview-hero-b-content {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px 100px;
+  }
+  .preview-hero-b-content .hero-tagline {
+    color: var(--ink);
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255,255,255,0.95), 0 0 20px rgba(255,255,255,0.85);
+    background: none;
+    padding: 0;
+    max-width: 480px;
+    margin: 0 0 36px;
+  }
+</style>
+</head>
+<body>
+
+<div class="preview-hero-b">
+  <nav class="preview-nav-b">
+    <img src="images/illustrations/logo.png" alt="Little Witch, Let's Go!">
+    <div class="nav-links">
+      <a href="#">Story</a>
+      <a href="#">Characters</a>
+      <a href="#">Art</a>
+      <a href="#">World</a>
+    </div>
+  </nav>
+  <div class="preview-hero-b-content">
+    <p class="hero-tagline">A soft, warm, and magical coming-of-age journey<br>about friendship, imperfection, and finding your own kind of magic.</p>
+    <a href="#" class="paw-button">
+      <img src="images/illustrations/paw_idle.png" alt="" class="paw-idle">
+      <span>Begin the Journey</span>
+    </a>
+  </div>
+</div>
+
+<div style="padding:40px; text-align:center; color:#7c6a72; font-family:'Nunito',sans-serif;">
+  <p>This is <strong>Option B — Minimal Centered</strong>. Logo moves into the nav bar (small, top-left), no glass panel — just clean glow text and lots of breathing room.</p>
+</div>
+
+</body>
+</html>

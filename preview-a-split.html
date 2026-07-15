@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preview A — Split Screen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .preview-hero {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    min-height: 100vh;
+  }
+  .preview-hero-text {
+    background: linear-gradient(160deg, var(--blush) 0%, var(--lavender) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 8%;
+  }
+  .preview-hero-text .hero-logo { max-width: 260px; margin: 0 0 24px; }
+  .preview-hero-text .hero-tagline {
+    text-align: left;
+    color: var(--ink);
+    font-weight: 700;
+    text-shadow: none;
+    background: none;
+    padding: 0;
+    margin: 0 0 32px;
+    max-width: 420px;
+  }
+  .preview-hero-image {
+    background-image: url('images/illustrations/师姐的魔法.png');
+    background-size: cover;
+    background-position: center 20%;
+  }
+  @media (max-width: 800px) {
+    .preview-hero { grid-template-columns: 1fr; }
+    .preview-hero-image { min-height: 40vh; }
+    .preview-hero-text { align-items: center; text-align: center; }
+    .preview-hero-text .hero-tagline { text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="preview-hero">
+  <div class="preview-hero-text">
+    <img src="images/illustrations/logo.png" alt="Little Witch, Let's Go!" class="hero-logo">
+    <p class="hero-tagline">A soft, warm, and magical coming-of-age journey about friendship, imperfection, and finding your own kind of magic.</p>
+    <a href="#" class="paw-button">
+      <img src="images/illustrations/paw_idle.png" alt="" class="paw-idle">
+      <span>Begin the Journey</span>
+    </a>
+  </div>
+  <div class="preview-hero-image"></div>
+</div>
+
+<div style="padding:40px; text-align:center; color:#7c6a72; font-family:'Nunito',sans-serif;">
+  <p>This is <strong>Option A — Split Screen</strong>. Text lives on a solid color panel, illustration bleeds full-height on the other side.</p>
+</div>
+
+</body>
+</html>
