@@ -439,6 +439,95 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 6px 15px rgba(234,179,189,0.4);
 }
 
+/* ---------- Lightbox ---------- */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(45, 30, 40, 0.94); /* Deep magical purple/rose shadow */
+  backdrop-filter: blur(8px);
+  cursor: zoom-out;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.lightbox-container {
+  position: relative;
+  max-width: 90%;
+  max-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(234,179,189,0.3);
+  border: 4px solid var(--white-soft);
+  transform: scale(0.9);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.lightbox-logo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 140px;
+  opacity: 0.95;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+  pointer-events: none;
+  transform: scale(0.9);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.lightbox.active .lightbox-logo {
+  transform: scale(1);
+}
+
+.lightbox.active .lightbox-content {
+  transform: scale(1);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: var(--white-soft);
+  font-size: 50px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 2010;
+  line-height: 1;
+}
+
+.lightbox-close:hover {
+  color: var(--rose-1);
+  transform: scale(1.1);
+}
+
+/* Gallery Hover Pointer */
+.illustration-gallery img, .world-item {
+  cursor: zoom-in;
+}
+
 .illustrations {
   padding: 100px 6%;
   background: var(--cream);
@@ -453,15 +542,34 @@ a { text-decoration: none; color: inherit; }
   margin: 40px auto 0;
 }
 
-.illustration-gallery img {
+.gallery-item {
+  position: relative;
   border-radius: 24px;
   box-shadow: 0 14px 36px var(--shadow);
   border: 4px solid var(--white-soft);
   transition: transform 0.3s ease;
+  cursor: zoom-in;
 }
 
-.illustration-gallery img:hover {
+.gallery-item:hover {
   transform: scale(1.02) rotate(-0.5deg);
+}
+
+.gallery-item img:not(.gallery-logo) {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.gallery-logo {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 100px;
+  opacity: 0.9;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
+  pointer-events: none;
 }
 
 /* ---------- World ---------- */

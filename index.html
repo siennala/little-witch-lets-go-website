@@ -198,8 +198,14 @@
 <section id="illustrations" class="illustrations">
   <h2 class="section-title">Illustrations</h2>
   <div class="illustration-gallery">
-    <img src="images/illustrations/头像 多人.png" alt="The whole cast together">
-    <img src="images/illustrations/师姐的魔法.png" alt="A senior witch's magic">
+    <div class="gallery-item">
+      <img src="images/illustrations/头像 多人.png" alt="The whole cast together">
+      <img src="images/illustrations/logo.png" class="gallery-logo" alt="Logo">
+    </div>
+    <div class="gallery-item">
+      <img src="images/illustrations/师姐的魔法.png" alt="A senior witch's magic">
+      <img src="images/illustrations/logo.png" class="gallery-logo" alt="Logo">
+    </div>
   </div>
 </section>
 
@@ -224,6 +230,16 @@
   Working on spending more time writing and less time daydreaming.</p>
   <p class="footer-copyright">© 2026 Sienna Sunflower.</p>
 </footer>
+
+<!-- LIGHTBOX OVERLAY -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <div class="lightbox-container">
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged Art">
+    <img src="images/illustrations/logo.png" class="lightbox-logo" alt="Logo">
+  </div>
+  <div id="lightbox-caption"></div>
+</div>
 
 <script src="script.js"></script>
 </body>

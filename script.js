@@ -39,6 +39,39 @@ const observer = new IntersectionObserver(
 
 revealTargets.forEach((el) => observer.observe(el));
 
+// Lightbox logic
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.lightbox-close');
+
+const galleryItems = document.querySelectorAll('.gallery-item, .world-item');
+
+galleryItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const img = item.querySelector('img:not(.gallery-logo):not(.world-logo)');
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'flex';
+    // Small delay to trigger the CSS transition
+    setTimeout(() => {
+      lightbox.classList.add('active');
+    }, 10);
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+  });
+});
+
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  setTimeout(() => {
+    lightbox.style.display = 'none';
+  }, 400);
+  document.body.style.overflow = 'auto';
+}
+
+closeBtn.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (e) => {
+  if (e.target !== lightboxImg) closeLightbox();
+});
+
 // Tap-to-flip for touch devices (hover doesn't work well on mobile).
 // First tap flips the card to preview the quote; second tap follows the link to the character page.
 document.querySelectorAll('.char-card').forEach((card) => {
