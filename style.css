@@ -694,31 +694,35 @@ a { text-decoration: none; color: inherit; }
 .char-page-nav a:hover { color: var(--ink); }
 
 .char-page {
-  max-width: 1100px;
+  max-width: 1550px;
   margin: 0 auto;
   padding: 20px 6% 100px;
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 50px;
-  align-items: stretch;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 
 .char-page-img {
   background: linear-gradient(160deg, var(--white-soft), var(--blush) 140%);
   border-radius: 28px;
-  padding: 14px;
+  padding: 0;
   text-align: center;
   box-shadow: 0 14px 34px var(--shadow);
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 560px;
+  height: 900px;
+  overflow: hidden;
 }
 
 .char-page-img img {
-  width: 100%;
+  width: auto;
   height: 100%;
+  max-width: 100%;
   object-fit: contain;
+  transform: scale(1.1) translateY(-4%);
+  transform-origin: center 15%;
 }
 
 .char-page-body h1 {
