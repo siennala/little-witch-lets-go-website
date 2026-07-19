@@ -390,32 +390,32 @@ a { text-decoration: none; color: inherit; }
 
 .char-info h3 {
   font-family: var(--font-serif);
-  font-size: 1.85rem;
+  font-size: 2.1rem; /* Bolder headline for the card */
   margin: 0 0 4px;
   color: var(--text-dark);
 }
 
 .char-role {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-style: italic;
   color: var(--rose-2);
-  margin: 0 0 14px;
+  margin: 0 0 16px;
 }
 
 .char-blurb {
-  font-size: 1rem;
-  line-height: 1.55;
+  font-size: 1.1rem;
+  line-height: 1.6;
   color: var(--text-mid);
-  margin: 0 0 14px;
+  margin: 0 0 18px;
 }
 
 .char-quote {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1.05rem;
+  font-size: 1.15rem; /* Standard readable quote size */
   color: var(--text-dark);
-  margin: 0 0 20px;
-  padding-top: 10px;
+  margin: 0 0 24px;
+  padding-top: 12px;
   border-top: 1px dashed rgba(180,120,130,0.35);
 }
 
@@ -726,32 +726,35 @@ a { text-decoration: none; color: inherit; }
 }
 
 .char-page-body h1 {
-  font-size: 2.2rem;
+  font-size: 3rem; /* Cinematic title size */
   color: var(--ink);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .char-page-role {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   color: var(--gold-deep);
   font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .char-page-body p.bio {
   color: var(--ink);
-  line-height: 1.85;
-  margin-bottom: 18px;
+  line-height: 1.8;
+  font-size: 1.15rem; /* Standard large body size */
+  margin-bottom: 22px;
 }
 
 .char-page-quote {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.15rem;
+  font-size: 1.45rem; /* High-impact quote */
   color: var(--lavender-deep);
-  border-left: 3px solid var(--lavender-deep);
-  padding-left: 18px;
-  margin-top: 28px;
+  border-left: 4px solid var(--lavender-deep);
+  padding-left: 22px;
+  margin-top: 32px;
+  line-height: 1.5;
 }
 
 .char-page-nextprev {
