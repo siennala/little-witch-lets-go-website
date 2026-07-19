@@ -304,99 +304,121 @@ a { text-decoration: none; color: inherit; }
 
 .character-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 28px;
-  max-width: 1200px;
-  margin: 40px auto 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px 20px;
+  max-width: 1550px;
+  margin: 36px auto 0;
+}
+
+@media (max-width: 1024px) {
+  .character-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .character-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .char-card {
-  display: block;
-  perspective: 1200px;
-  height: 340px;
-  text-decoration: none;
-  color: inherit;
-}
-
-.char-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
-  transform-style: preserve-3d;
-  cursor: pointer;
-}
-
-.char-card:hover .char-card-inner,
-.char-card.flipped .char-card-inner {
-  transform: rotateY(180deg);
-}
-
-.char-face, .char-back {
-  position: absolute;
-  inset: 0;
-  backface-visibility: hidden;
-  border-radius: 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 10px 26px var(--shadow);
-}
-
-.char-face {
+  text-decoration: none;
+  color: inherit;
   background: linear-gradient(160deg, var(--white-soft), var(--blush) 140%);
   border: 1px solid rgba(234,179,189,0.5);
+  border-radius: 24px;
+  padding: 0 0 20px;
+  box-shadow: 0 10px 26px var(--shadow);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-.char-face img {
-  max-height: 190px;
-  object-fit: contain;
+.char-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(150,100,90,0.28);
+}
+
+.char-portrait {
+  width: 100%;
+  height: 900px;
   margin-bottom: 12px;
-  filter: drop-shadow(0 6px 14px rgba(150,100,90,0.25));
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
 }
 
-.char-face h3 {
-  font-size: 1.2rem;
-  color: var(--ink);
+.char-portrait img {
+  width: auto;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 22px rgba(150,100,90,0.28));
+  transform: scale(1.1) translateY(-4%);
+  transform-origin: center 15%;
+  transition: transform 0.4s ease;
+}
+
+.char-card:hover .char-portrait img {
+  transform: scale(1.15) translateY(-4%);
+}
+
+.char-info {
+  padding: 0 16px;
+  text-align: center;
+}
+
+/* Targeted adjustment for Yuyao to show her staff */
+.img-yuyao {
+  transform: scale(1.1) translate(5%, -4%) !important;
+}
+
+.char-card:hover .img-yuyao {
+  transform: scale(1.15) translate(5%, -4%) !important;
+}
+
+.char-info {
+  text-align: center;
+  padding: 0 6px;
+}
+
+.char-info h3 {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  margin: 0 0 4px;
+  color: var(--text-dark);
 }
 
 .char-role {
-  font-size: 0.82rem;
-  color: var(--ink-soft);
-  font-weight: 600;
-  margin-top: 4px;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--rose-2);
+  margin: 0 0 14px;
 }
 
-.char-back {
-  background: linear-gradient(160deg, var(--lavender), var(--white-soft) 140%);
-  border: 1px solid rgba(185,164,221,0.5);
-  transform: rotateY(180deg);
-}
-
-.char-back h3 {
-  color: var(--lavender-deep);
-  margin-bottom: 10px;
-}
-
-.char-back p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: var(--ink);
-  margin: 0 0 12px;
+.char-blurb {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--text-mid);
+  margin: 0 0 14px;
 }
 
 .char-quote {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-style: italic;
-  font-weight: 700;
-  color: var(--gold-deep);
-  font-size: 0.88rem;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(180,120,130,0.35);
 }
 
-/* ---------- Illustrations ---------- */
 .illustrations {
   padding: 100px 6%;
   background: var(--cream);
