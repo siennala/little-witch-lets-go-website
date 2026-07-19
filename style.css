@@ -454,13 +454,16 @@ a { text-decoration: none; color: inherit; }
   cursor: zoom-out;
   opacity: 0;
   transition: opacity 0.4s ease;
+  /* Keep centered even when fading out */
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
 }
 
 .lightbox.active {
   display: flex;
-  justify-content: center;
-  align-items: center;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .lightbox-container {
@@ -485,25 +488,28 @@ a { text-decoration: none; color: inherit; }
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.lightbox.active .lightbox-content {
+  transform: scale(1);
+}
+
 .lightbox-logo {
   position: absolute;
   bottom: 20px;
   right: 20px;
   width: 140px;
-  opacity: 0.95;
+  opacity: 0; /* Hide by default */
   filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
   pointer-events: none;
   transform: scale(0.9);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
 }
 
 .lightbox.active .lightbox-logo {
   transform: scale(1);
+  opacity: 0.95; /* Show when active */
 }
 
-.lightbox.active .lightbox-content {
-  transform: scale(1);
-}
+/* Removed duplicate active content rule */
 
 .lightbox-close {
   position: absolute;

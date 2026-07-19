@@ -51,11 +51,10 @@ galleryItems.forEach(item => {
     const img = item.querySelector('img:not(.gallery-logo):not(.world-logo)');
     lightboxImg.src = img.src;
     lightbox.style.display = 'flex';
-    // Small delay to trigger the CSS transition
     setTimeout(() => {
       lightbox.classList.add('active');
     }, 10);
-    document.body.style.overflow = 'hidden'; // Prevent scrolling
+    document.body.style.overflow = 'hidden';
   });
 });
 
@@ -63,8 +62,8 @@ function closeLightbox() {
   lightbox.classList.remove('active');
   setTimeout(() => {
     lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto';
   }, 400);
-  document.body.style.overflow = 'auto';
 }
 
 closeBtn.addEventListener('click', closeLightbox);
