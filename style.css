@@ -414,9 +414,29 @@ a { text-decoration: none; color: inherit; }
   font-style: italic;
   font-size: 1.05rem;
   color: var(--text-dark);
-  margin: 0;
+  margin: 0 0 20px;
   padding-top: 10px;
   border-top: 1px dashed rgba(180,120,130,0.35);
+}
+
+.char-link {
+  display: inline-block;
+  padding: 8px 24px;
+  background: var(--white-soft);
+  color: var(--rose-2);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 50px;
+  border: 1.5px solid var(--blush);
+  box-shadow: 0 4px 10px rgba(234,179,189,0.3);
+  transition: all 0.3s ease;
+}
+
+.char-card:hover .char-link {
+  background: var(--rose-2);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(234,179,189,0.4);
 }
 
 .illustrations {
