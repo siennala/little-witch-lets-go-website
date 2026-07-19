@@ -548,13 +548,13 @@ a { text-decoration: none; color: inherit; }
   overflow: hidden;
   box-shadow: 0 14px 36px var(--shadow);
   border: 4px solid var(--white-soft);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: zoom-in;
   display: flex;
 }
 
 .gallery-item:hover {
-  transform: translateY(-6px) scale(1.01);
+  transform: scale(1.02) rotate(-0.5deg);
   box-shadow: 0 20px 45px var(--shadow);
 }
 
